@@ -5,12 +5,11 @@ var myMonth = parseInt(prompt("What Month were you born?"));
 var myDay = parseInt(prompt("What Day were you born ?"));
 var myGender = parseInt(prompt("What Gender are you?"));
 
-
 var CC, YY, MM, DD, d, dayValue;
-CC= myCentury
-YY= myYear
-MM= myMonth
-DD= myDay
+    CC= myCentury
+    YY= myYear
+    MM= myMonth
+    DD= myDay
 
 var dayNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
 var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
