@@ -1,10 +1,25 @@
+h1 {
+  color: rgb(28, 160, 160);
+  text-align: center;
+}
+h3{
+  color:hsl(180, 70%, 37%);
+  text-align: center;
+}
+h4{
+  color: teal;
+  text-align: left;
+}
+
 .test-box {
   font-size: 16px;
   font-size: max(16px, 1em);
   font-family: inherit;
   padding: 0.25em 0.5em;
   background-color: rgb(198, 245, 217);
-  border: 2px solid;
   border-radius: 4px;
   column-count: 2;
+}
+h1 {
+
 }
