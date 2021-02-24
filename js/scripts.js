@@ -1,27 +1,64 @@
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
 
-var myCentury = parseInt(prompt("What century were you born?"));
-var myYear = parseInt(prompt("What year were you born ?"));
-var myMonth = parseInt(prompt("What Month were you born?"));
-var myDay = parseInt(prompt("What Day were you born ?"));
-var myGender = parseInt(prompt("What Gender are you?"));
+
+function nameGenerator(event){
+        event.preventDefault();
+        console.log ("Form is submitted")
+        let year= document.getElementById("# Year").value;
+        console.log("year", year);
+
+        let Month= document.getElementById("#month").value;
+        let day = document.getElementById("#day").value;
+
+        if (year < 1900) {
+            console.log("Error!");
+          } else if (year < 2100) {
+            console.log("Proceed!");
+          } else {
+            console.log("Error!");
+          }
+
+          if (month < 1) {
+            console.log("Error!");
+          } else if (month < 13) {
+            console.log("Proceed!");
+          } else {
+            console.log("Error!");
+          } 
+
+          if (day < 1) {
+            console.log("Error!");
+          } else if (day < 32) {
+            console.log("Proceed!");
+          } else {
+            console.log("Error!");
+          }
+        // run a function here
+
+}
+
+let myform = document.querySelector("#nameGeneratorForm");
+myform.style.color = "red"
+myform.addEventListener("submit", generate);
+
 
 var CC, YY, MM, DD, d, dayValue;
-    CC= myCentury
-    YY= myYear
-    MM= myMonth
-    DD= myDay
+    YY= Year
+    MM= Month
+    DD= Day
+   var cc = year/100
+
+   
+
 
 var dayNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
 var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
 var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
 
-Function= d = ( ( (CC/4) -2*CC-1) + ( (5*YY/4) ) + ((26*(MM+1)/10) ) + DD)%7;
-var getAkanName = ( ( (CC/4) -2*CC-1) + ( (5*YY/4) ) + ((26*(MM+1)/10) ) + DD)%7;
+  
 
-function getAkanName () {
-  let myYear = document.getElementById("year-input").value;
-  let myMonth = Number(document.getElementById("month-input").value);
-  let myDay = Number(document.getElementById("day-input").value);
-  let genders = document.getElementsByName("gender");}
 
-  alert (d)
+alert (nameGenerator);
+   
