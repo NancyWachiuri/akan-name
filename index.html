@@ -5,10 +5,11 @@
     <div class="container">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-  
+
     <title>Akan Name Generator</title>
   </head>
   <body>
+    <div class="container"> 
     <h1>Find My Akan Name</h1>
     <p>In West Africa, newborns are given special names depending on the day they are born. Diverse ethnicities have variants and meanings as a symbol of cultural integrity and ancestral affiliation. Here’s your need-to-know guide. </p>
     <h3>Day Names in Akan Culture</h3>
@@ -38,7 +39,7 @@
      </ol>
   </div>
 </div>
-<form>
+<form id="nameGeneratorForm">
   <div class="form-group row">
     <label for="Year" class="col-md-2 col-form-label">Year of Birth</label>
     <div class="col-md-5">
@@ -48,13 +49,13 @@
   <div class="form-group row">
     <label for="month" class="col-md-2 col-form-label">Month</label>
     <div class="col-md-5">
-      <input type="number" class="form-control" id="Month" min="1"  max="12" required>
+      <input type="number" class="form-control" id="month" min="1"  max="12" required>
     </div>
   </div>
   <div class="form-group row">
-    <label for="Day" class="col-md-2 col-form-label">Day</label>
+    <label for="day" class="col-md-2 col-form-label">Day</label>
     <div class="col-md-5">
-      <input type="number" class="form-control" id="Year" min="1" max="31" required>
+      <input type="number" class="form-control" id="day" min="1" max="31" required>
     </div>
   <fieldset class="form-group row">
     <legend class="col-form-label col-md-2 float-md-left pt-0">Choose Gender</legend>
@@ -75,10 +76,12 @@
   </fieldset>
   <div class="form-group row">
     <div class="col-md-10">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Generate</button>
     </div>
   </div>
 </form>
+</div>
 <script src="js/scripts.js"></script>
+
 </body>
 </html>
