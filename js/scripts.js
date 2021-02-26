@@ -1,64 +1,85 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-});
 
+var maleNames= ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
+var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
 
-function nameGenerator(event){
-        event.preventDefault();
-        console.log ("Form is submitted")
-        let year= document.getElementById("# Year").value;
-        console.log("year", year);
-
-        let Month= document.getElementById("#month").value;
-        let day = document.getElementById("#day").value;
-
-        if (year < 1900) {
-            console.log("Error!");
-          } else if (year < 2100) {
-            console.log("Proceed!");
-          } else {
-            console.log("Error!");
-          }
-
-          if (month < 1) {
-            console.log("Error!");
-          } else if (month < 13) {
-            console.log("Proceed!");
-          } else {
-            console.log("Error!");
-          } 
-
-          if (day < 1) {
-            console.log("Error!");
-          } else if (day < 32) {
-            console.log("Proceed!");
-          } else {
-            console.log("Error!");
-          }
-        // run a function here
-
+function myFunction (){
+alert ("hi");
 }
 
-let myform = document.querySelector("#nameGeneratorForm");
-myform.style.color = "red"
-myform.addEventListener("submit", generate);
+var y = document.getElementById("year").value;
+var m = document.getElemtntById("month").value;
+var d = document.getElementById("day").value;
+var g = document.getElementById ("gender").value;
+
+var YY = parseInt(y);
+var MM =parseInt(m);
+var DD =parseInt(d);
 
 
-var CC, YY, MM, DD, d, dayValue;
-    YY= Year
-    MM= Month
-    DD= Day
-   var cc = year/100
-
-   
 
 
-var dayNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
+if (MM >= 3) {
+  MM -= 2;
+} else {
+  MM += 10;
+}
+if ((MM == 11) || (MM == 12)) YY--;
+var nCentury = parseInt(YY / 100);
+var nYear100 = YY % 100;
+var h = 0;    // day of week number
+h += parseInt(DD);
+h += parseInt((13 / 5) * MM - 0.2);
+h += parseInt(nYear100);
+h += parseInt(nYear100 / 4);
+h += parseInt(nCentury / 4);
+h -= parseInt(2 * nCentury);
+h %= 7;
+if (YY >= 1700 && YY <= 1751) {
+  h -= 3;
+} else {
+  if (YY <= 1699) h -= 4;
+}
+
+var result = h;
+
+//var gender = g;
+
+//alert (result);
+
+/*let akanName;
+if (gender ==='male'){
+  akanName =  maleNames[result]
+} else if (gender === 'female'){
+  akanName = femaleNames[result]
+}else {
+   akanName = "Invalid gender";
+}
+alert ("Your Akan name is" + akanName)*/
+
+
+
+
+
+/*var dayNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
 var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
 var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
 
-  
+function myfunction(){
+let gender ="male";
+var CC =20, YY= 21, MM =2, DD =24;
+ 
 
+const dayOfTheWeek = Math.round(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7);
 
-alert (nameGenerator);
-   
+let akanName;
+
+if (gender='male'){
+  akanName = maleNames {dayOfTheWeek}
+} else if (gender = 'female'){
+  akanName = femaleNames(dayOfTheWeek)https://meet.google.com/atg-xdxa-qmh
+}else {
+   akanName = "Invalid gender";
+}
+
+console.log("Your akan name is: " + akanName)*/
+
