@@ -19,11 +19,11 @@ function generateAkan(){
   else {
     alert("Please select gender")
   }    
-}
+
   if (month > 12 || month < 1){
      alert ("Invalid month")
   }
   if (day > 31 || month <1){
     alert ("Invalid date")
   }
- 
+}
